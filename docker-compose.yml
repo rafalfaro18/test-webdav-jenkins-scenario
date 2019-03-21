@@ -10,7 +10,7 @@ services:
   webdav:
     image: bytemark/webdav:latest
     ports: 
-      - "80:8081"
+      - "8081:80"
     environment:
       AUTH_TYPE: Digest
       USERNAME: alice
