@@ -19,6 +19,6 @@ services:
     networks:
       - automation
     volumes:
-      - .test:/var/lib/dav
+      - ./test:/var/lib/dav
 networks: 
   automation:
