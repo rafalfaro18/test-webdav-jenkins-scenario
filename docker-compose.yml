@@ -1,0 +1,24 @@
+version: "3"
+services:
+  jenkins:
+    image: rafalfaro/jenkins-cyberduck:latest
+    ports: 
+      - "8080:8080"
+      - "5000:5000"
+    networks:
+      - automation
+services:
+  webdav:
+    image: bytemark/webdav:latest
+    ports: 
+      - "80:8081"
+    environment:
+      AUTH_TYPE: Digest
+      USERNAME: alice
+      PASSWORD: secret1234
+    networks:
+      - automation
+    volumes:
+      - .test:/var/lib/dav
+networks: 
+  automation:
