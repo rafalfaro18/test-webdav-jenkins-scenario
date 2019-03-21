@@ -7,7 +7,6 @@ services:
       - "5000:5000"
     networks:
       - automation
-services:
   webdav:
     image: bytemark/webdav:latest
     ports: 
